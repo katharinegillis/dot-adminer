@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Remove the adminer docker
-cd $HOME/utils/adminer || exit 1
+cd $HOME/utils/adminer || return
 docker-compose down
-cd $HOME || exit 1
+cd $HOME || return
 rm -rf $HOME/utils/adminer

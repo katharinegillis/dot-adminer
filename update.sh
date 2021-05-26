@@ -2,7 +2,7 @@
 
 [ ! -d "$HOME/utils" ] && mkdir $HOME/utils
 
-cd $HOME/utils/adminer || exit 1
+cd $HOME/utils/adminer || return
 docker-compose down
 git pull origin master
 docker-compose pull
