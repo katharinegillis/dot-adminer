@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-[ ! -d "$HOME/utils" ] && mkdir $HOME/utils
+if [ ! -d "$HOME/utils" ]; then
+    mkdir "$HOME/utils"
+fi
 
-cd $HOME/utils/adminer || return
+cd "$HOME/utils/adminer" || return
 docker-compose down
 git pull origin master
 docker-compose pull
